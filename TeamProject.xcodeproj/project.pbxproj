@@ -15,6 +15,7 @@
 		8A14D8232384AFE200F0AE4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A14D8212384AFE200F0AE4C /* LaunchScreen.storyboard */; };
 		8A14D82E2384AFE200F0AE4C /* TeamProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14D82D2384AFE200F0AE4C /* TeamProjectTests.swift */; };
 		8A14D8392384AFE200F0AE4C /* TeamProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14D8382384AFE200F0AE4C /* TeamProjectUITests.swift */; };
+		8A14D8472384B40000F0AE4C /* Screen Shot 2019-11-09 at 10.11.47 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A14D8462384B40000F0AE4C /* Screen Shot 2019-11-09 at 10.11.47 PM.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8A14D8342384AFE200F0AE4C /* TeamProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A14D8382384AFE200F0AE4C /* TeamProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamProjectUITests.swift; sourceTree = "<group>"; };
 		8A14D83A2384AFE200F0AE4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A14D8462384B40000F0AE4C /* Screen Shot 2019-11-09 at 10.11.47 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2019-11-09 at 10.11.47 PM.png"; path = "../../../../Users/goter012/Desktop/Screen Shot 2019-11-09 at 10.11.47 PM.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		8A14D8142384AFE200F0AE4C /* TeamProject */ = {
 			isa = PBXGroup;
 			children = (
+				8A14D8462384B40000F0AE4C /* Screen Shot 2019-11-09 at 10.11.47 PM.png */,
 				8A14D8152384AFE200F0AE4C /* AppDelegate.swift */,
 				8A14D8172384AFE200F0AE4C /* ViewController.swift */,
 				8A14D8192384AFE200F0AE4C /* Main.storyboard */,
@@ -238,6 +241,7 @@
 				8A14D8232384AFE200F0AE4C /* LaunchScreen.storyboard in Resources */,
 				8A14D8202384AFE200F0AE4C /* Assets.xcassets in Resources */,
 				8A14D81B2384AFE200F0AE4C /* Main.storyboard in Resources */,
+				8A14D8472384B40000F0AE4C /* Screen Shot 2019-11-09 at 10.11.47 PM.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
