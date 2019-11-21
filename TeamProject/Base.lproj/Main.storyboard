@@ -183,10 +183,10 @@
             </objects>
             <point key="canvasLocation" x="665" y="364"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Controller-->
         <scene sceneID="AwU-iw-7VR">
             <objects>
-                <viewController id="uR8-GN-Sdi" customClass="ViewController" customModule="TeamProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uR8-GN-Sdi" customClass="createController" customModule="TeamProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L3i-1k-fbx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,7 +209,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2019-11-09 at 10.11.47 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="BDv-oA-8gm">
                                 <rect key="frame" x="16" y="71" width="343" height="164"/>
@@ -227,6 +227,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="createPressed:" destination="uR8-GN-Sdi" eventType="touchUpInside" id="t0d-fl-BHn"/>
                                             <segue destination="S5V-90-5AX" kind="show" id="tDp-v0-g53"/>
                                         </connections>
                                     </button>
@@ -252,10 +253,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PJf-NL-ofz"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="dxd-ht-5vK" id="19C-Yn-RZr"/>
+                        <outlet property="pwField" destination="5m9-lH-JfV" id="hZe-z5-cdV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbO-E8-uj2" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="-349"/>
+            <point key="canvasLocation" x="296.80000000000001" y="-349.47526236881561"/>
         </scene>
     </scenes>
     <resources>
