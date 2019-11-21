@@ -49,6 +49,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="logInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="coY-zm-qDA"/>
                                             <segue destination="S5V-90-5AX" kind="show" id="Sxf-cm-qAM"/>
                                         </connections>
                                     </button>
@@ -98,6 +99,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="0cj-iD-Ndj" id="4zg-Ph-2ZC"/>
+                        <outlet property="passFIeld" destination="AFn-HU-bBW" id="uzj-uW-lIu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,7 +144,9 @@
         <scene sceneID="hao-Kk-Iro">
             <objects>
                 <tabBarController id="VNi-gc-siG" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="ResQme" id="zef-LK-8KF"/>
+                    <navigationItem key="navigationItem" title="ResQme" id="zef-LK-8KF">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="lVk-tX-bMz"/>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qO0-kA-06r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -267,6 +274,6 @@
         <image name="Screen Shot 2019-11-09 at 10.11.47 PM.png" width="369" height="195"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tDp-v0-g53"/>
+        <segue reference="Sxf-cm-qAM"/>
     </inferredMetricsTieBreakers>
 </document>

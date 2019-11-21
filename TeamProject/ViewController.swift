@@ -10,55 +10,57 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
-
+    
     let persistenceManager = PersistenceManager.shared
     
-   
     
-   
-    
-    
+    @IBOutlet var emailField: UITextField!
+    @IBOutlet var passFIeld: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         
-    let context = persistenceManager.context
-    let entityName = NSEntityDescription.entity(forEntityName: "User", in: context)!
-       let user = NSManagedObject(entity: entityName, insertInto: context)
-        user.setValue("goter012@fiu.edu", forKeyPath:"email")
-        user.setValue("Guillermo", forKeyPath:"firstName")
-        user.setValue("Otero", forKeyPath:"lastName")
-        user.setValue("password", forKeyPath:"password")
-        user.setValue("305-725-2360", forKeyPath:"phoneNumber")
-        user.setValue("11-11-1997",forKeyPath:"dateOfBirth")
-        do{
-            try context.save()
-            
-        }catch let error as NSError{
-            print(error)
-        }
-     
-//        let context = persistenceManager.context
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"User")
-//
-//
-//        do{
-//            let result = try context.fetch(fetchRequest)
-//            for data in result as! [NSManagedObject]{
-//                print(data.value(forKey: "email") as! String)
-//            }
-//
-//        }catch{
-//            print("Failed")
-//        }
+        let context = persistenceManager.context
+        
+        passFIeld.isSecureTextEntry = true
+        
+        //let documentDirectory = FileManager.SearchPathDirectory.documentDirectory
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
+    @IBAction func logInPressed(_ sender: Any) {
+        
+        let context = persistenceManager.context
+        
+        do {
+            let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "email == %@ && password == %@", emailField.text!, passFIeld.text!)
+            let fetchedResults = try context.fetch(fetchRequest) as! [User]
+            
+            if (fetchedResults.count == 0){
+                
+                let alert = UIAlertController(title: "Error", message: "Invalid email or password", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
+                self.present(alert, animated: true)
+                
+            }
+        }
+        catch {
+            print ("fetch task failed", error)
+        }
+        
+    }
     
 }
 
