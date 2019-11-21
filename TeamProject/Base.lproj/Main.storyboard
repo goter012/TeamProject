@@ -20,9 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2019-11-09 at 10.11.47 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="sJB-AW-9FC">
-                                <rect key="frame" x="16" y="24" width="343" height="191"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="jane@example.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cj-iD-Ndj">
                                 <rect key="frame" x="16" y="240" width="343" height="45"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,6 +48,9 @@
                                         <state key="normal" title="LOG IN">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="S5V-90-5AX" kind="show" id="Sxf-cm-qAM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -64,10 +64,16 @@
                                         <state key="normal" title="CREATE">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="uR8-GN-Sdi" kind="show" identifier="createAccount" id="wQs-RJ-aDW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2019-11-09 at 10.13.03 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="sJB-AW-9FC">
+                                <rect key="frame" x="16" y="52" width="343" height="164"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.046990372240543365" green="0.14455500245094299" blue="0.3920339047908783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -78,6 +84,8 @@
                             <constraint firstItem="0cj-iD-Ndj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IHu-2a-PxO"/>
                             <constraint firstItem="N19-m9-AVj" firstAttribute="width" secondItem="sJB-AW-9FC" secondAttribute="width" id="Ihl-M6-3Vs"/>
                             <constraint firstItem="U1M-ll-r2M" firstAttribute="top" secondItem="N19-m9-AVj" secondAttribute="bottom" constant="21" id="MHa-I3-Jx2"/>
+                            <constraint firstItem="0cj-iD-Ndj" firstAttribute="top" secondItem="sJB-AW-9FC" secondAttribute="bottom" constant="24" id="QSl-1t-fX5"/>
+                            <constraint firstItem="sJB-AW-9FC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="RkN-yI-8du"/>
                             <constraint firstItem="AFn-HU-bBW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TW6-L1-4SS"/>
                             <constraint firstItem="N19-m9-AVj" firstAttribute="top" secondItem="AFn-HU-bBW" secondAttribute="bottom" constant="18" id="UsH-Lr-gqM"/>
                             <constraint firstItem="U1M-ll-r2M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WHg-2d-Bfk"/>
@@ -86,7 +94,6 @@
                             <constraint firstItem="AFn-HU-bBW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gZm-yk-irG"/>
                             <constraint firstItem="sJB-AW-9FC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lXS-Fo-xn0"/>
                             <constraint firstItem="U1M-ll-r2M" firstAttribute="height" secondItem="0cj-iD-Ndj" secondAttribute="height" id="nRr-nx-cM3"/>
-                            <constraint firstItem="0cj-iD-Ndj" firstAttribute="top" secondItem="sJB-AW-9FC" secondAttribute="bottom" constant="25" id="oHt-8r-FOw"/>
                             <constraint firstItem="N19-m9-AVj" firstAttribute="height" secondItem="0cj-iD-Ndj" secondAttribute="height" id="zA4-xH-zty"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -94,7 +101,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-481" y="-348"/>
+            <point key="canvasLocation" x="-482.39999999999998" y="-348.57571214392806"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="QIO-0w-UFJ">
+            <objects>
+                <viewController id="I3L-XX-hIH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S9B-FA-MxG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3qE-NA-sd9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="IcO-zt-0Y2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aZV-Oq-iuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="1050"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zKd-Xy-nKo">
+            <objects>
+                <navigationController id="S5V-90-5AX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BPW-tk-LJ4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VNi-gc-siG" kind="relationship" relationship="rootViewController" id="7We-UX-w7C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yI4-6L-WKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1497" y="716"/>
+        </scene>
+        <!--ResQme-->
+        <scene sceneID="hao-Kk-Iro">
+            <objects>
+                <tabBarController id="VNi-gc-siG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="ResQme" id="zef-LK-8KF"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qO0-kA-06r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FNH-Tl-TBi" kind="relationship" relationship="viewControllers" id="Bj3-VK-6CG"/>
+                        <segue destination="I3L-XX-hIH" kind="relationship" relationship="viewControllers" id="dm3-dO-7Vn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QyA-xI-obT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-570" y="716"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="T0h-Xd-9RN">
+            <objects>
+                <collectionViewController id="FNH-Tl-TBi" customClass="DogViewController" customModule="TeamProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fbv-iS-c8d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.73911958932876587" green="0.87838321924209595" blue="0.92335087060928345" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewLayout key="collectionViewLayout" id="VyP-jw-Faq" customClass="searchLayout" customModule="TeamProject" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ciA-0u-TdR">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="FNH-Tl-TBi" id="qME-yz-gLB"/>
+                            <outlet property="delegate" destination="FNH-Tl-TBi" id="w2A-2V-bZh"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Home" id="Or3-ug-0wG"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uqq-Sa-7ke" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="364"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AwU-iw-7VR">
@@ -124,7 +211,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2019-11-09 at 10.11.47 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="BDv-oA-8gm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2019-11-09 at 10.13.03 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="BDv-oA-8gm">
                                 <rect key="frame" x="16" y="71" width="343" height="164"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="164" id="E2L-EO-BiB"/>
@@ -139,6 +226,9 @@
                                         <state key="normal" title="CREATE">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="S5V-90-5AX" kind="show" id="tDp-v0-g53"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -165,10 +255,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbO-E8-uj2" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="492" y="-349"/>
+            <point key="canvasLocation" x="298" y="-349"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2019-11-09 at 10.11.47 PM.png" width="362" height="191"/>
+        <image name="Screen Shot 2019-11-09 at 10.13.03 PM.png" width="754" height="358"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Sxf-cm-qAM"/>
+    </inferredMetricsTieBreakers>
 </document>
