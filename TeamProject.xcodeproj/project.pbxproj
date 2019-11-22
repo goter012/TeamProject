@@ -17,6 +17,8 @@
 		8A14D8392384AFE200F0AE4C /* TeamProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14D8382384AFE200F0AE4C /* TeamProjectUITests.swift */; };
 		8E2C6BBD2385F64300169926 /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C6BBC2385F64200169926 /* DogViewController.swift */; };
 		8E2C6BC42386039700169926 /* searchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C6BC32386039700169926 /* searchLayout.swift */; };
+		8E80158F238893BC00393B1D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E80158E238893BC00393B1D /* profileViewController.swift */; };
+		8E8015942388A19700393B1D /* contactUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8015932388A19700393B1D /* contactUsController.swift */; };
 		ED2A00002387325F0081540A /* icons8-name-75.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2AFFFF2387325E0081540A /* icons8-name-75.png */; };
 		ED2A0002238732680081540A /* icons8-dog-paw-75.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2A0001238732670081540A /* icons8-dog-paw-75.png */; };
 		ED2A00042387326E0081540A /* Screen Shot 2019-11-09 at 10.11.47 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2A00032387326E0081540A /* Screen Shot 2019-11-09 at 10.11.47 PM.png */; };
@@ -58,6 +60,8 @@
 		8A14D83A2384AFE200F0AE4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E2C6BBC2385F64200169926 /* DogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewController.swift; sourceTree = "<group>"; };
 		8E2C6BC32386039700169926 /* searchLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchLayout.swift; sourceTree = "<group>"; };
+		8E80158E238893BC00393B1D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		8E8015932388A19700393B1D /* contactUsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactUsController.swift; sourceTree = "<group>"; };
 		ED2A0001238732670081540A /* icons8-dog-paw-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-dog-paw-75.png"; sourceTree = "<group>"; };
 		ED2A00032387326E0081540A /* Screen Shot 2019-11-09 at 10.11.47 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2019-11-09 at 10.11.47 PM.png"; sourceTree = "<group>"; };
 		ED2A00052387381F0081540A /* createController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				8A14D8152384AFE200F0AE4C /* AppDelegate.swift */,
 				8A14D8172384AFE200F0AE4C /* ViewController.swift */,
 				8A14D8192384AFE200F0AE4C /* Main.storyboard */,
+				8E8015932388A19700393B1D /* contactUsController.swift */,
+				8E80158E238893BC00393B1D /* profileViewController.swift */,
 				8E2C6BC32386039700169926 /* searchLayout.swift */,
 				8E2C6BBC2385F64200169926 /* DogViewController.swift */,
 				8A14D81F2384AFE200F0AE4C /* Assets.xcassets */,
@@ -292,7 +298,9 @@
 				ED2AFFFE23872F1D0081540A /* PersistenceManager.swift in Sources */,
 				ED2A00062387381F0081540A /* createController.swift in Sources */,
 				8A14D8162384AFE200F0AE4C /* AppDelegate.swift in Sources */,
+				8E80158F238893BC00393B1D /* profileViewController.swift in Sources */,
 				8A14D81E2384AFE200F0AE4C /* TeamProject.xcdatamodeld in Sources */,
+				8E8015942388A19700393B1D /* contactUsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
