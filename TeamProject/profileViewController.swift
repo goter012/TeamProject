@@ -17,7 +17,15 @@ class profileViewController: UIViewController{
     @IBOutlet var emailField: UITextField!
     @IBOutlet var phoneField: UITextField!
     @IBOutlet var birthdatePicker: UIDatePicker!
+   
+    var email: String!
+    var password: String!
     
-    
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        emailField.text = email
+        
+    }
 }

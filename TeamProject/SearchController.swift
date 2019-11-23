@@ -1,28 +1,27 @@
 //
-//  contactUsController.swift
+//  SearchController.swift
 //  TeamProject
 //
-//  Created by Gemma Velasco on 11/22/19.
+//  Created by guillermo j otero jr on 11/22/19.
 //  Copyright © 2019 guillermo j otero jr. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class contactUsViewController: UIViewController{
+
+class SearchController: UIViewController{
     
-    @IBAction func callPressed(_ sender: Any) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        guard let number = URL(string: "tell://" + "3059705970") else{return}
-        UIApplication.shared.open(number)
         
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    
 }

@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+
+
 class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
     
     let persistenceManager = PersistenceManager.shared
@@ -16,7 +18,9 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
     
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passFIeld: UITextField!
+    var email: String!
     
+    var password:String!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +41,8 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
     }
     
     
+    
+    
     @IBAction func logInPressed(_ sender: Any) {
         
         let context = persistenceManager.context
@@ -54,7 +60,9 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
                 
                 self.present(alert, animated: true)
                 
+            
             }
+            
         }
         catch {
             print ("fetch task failed", error)
