@@ -20,6 +20,7 @@ class profileViewController: UIViewController{
    
     var email: String!
     var password: String!
+    var imageStore: UIImage!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
