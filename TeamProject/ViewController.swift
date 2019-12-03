@@ -66,6 +66,7 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
         }
         catch {
             print ("fetch task failed", error)
+            //print
         }
         
     }
