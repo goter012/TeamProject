@@ -32,6 +32,7 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
         passFIeld.isSecureTextEntry = true
         
         //let documentDirectory = FileManager.SearchPathDirectory.documentDirectory
+        print("Hello")
         
     }
     
