@@ -132,12 +132,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="resqmedogmission@aol.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBF-AS-j7S">
-                                <rect key="frame" x="77" y="321" width="252" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yh-T2-wOJ">
                                 <rect key="frame" x="61" y="499" width="252" height="36"/>
                                 <constraints>
@@ -166,6 +160,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELr-CW-sEk">
+                                <rect key="frame" x="85" y="318" width="206" height="30"/>
+                                <state key="normal" title="resqmedogmission@aol.com">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="emailPressed:" destination="vNa-yr-qmE" eventType="touchUpInside" id="2vN-La-Jf1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0064853657969999997" green="0.14826610679999999" blue="0.4072672725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -173,6 +176,7 @@
                             <constraint firstItem="0be-yS-rZn" firstAttribute="centerX" secondItem="gO7-gm-1B7" secondAttribute="centerX" id="35W-9m-3gm"/>
                             <constraint firstItem="WbY-jR-zDy" firstAttribute="top" secondItem="qEz-48-A1c" secondAttribute="top" id="3a0-Qh-I1Y"/>
                             <constraint firstItem="WbY-jR-zDy" firstAttribute="leading" secondItem="F60-pW-3bH" secondAttribute="leading" id="4wD-Fk-qX6"/>
+                            <constraint firstItem="ELr-CW-sEk" firstAttribute="leading" secondItem="0be-yS-rZn" secondAttribute="leading" id="5oo-9h-CQe"/>
                             <constraint firstItem="qEz-48-A1c" firstAttribute="trailing" secondItem="0be-yS-rZn" secondAttribute="trailing" constant="84" id="8x9-YR-zoM"/>
                             <constraint firstItem="5Yh-T2-wOJ" firstAttribute="leading" secondItem="qEz-48-A1c" secondAttribute="leading" constant="61" id="HvM-Y8-23U"/>
                             <constraint firstItem="WbY-jR-zDy" firstAttribute="leading" secondItem="ZNv-pP-2oF" secondAttribute="leadingMargin" id="Ifv-9z-ja9"/>
@@ -180,20 +184,23 @@
                             <constraint firstItem="WbY-jR-zDy" firstAttribute="trailing" secondItem="ZNv-pP-2oF" secondAttribute="trailingMargin" id="Sen-DB-UWm"/>
                             <constraint firstItem="E3a-0z-JQW" firstAttribute="centerY" secondItem="ZNv-pP-2oF" secondAttribute="centerY" id="T3N-hI-Yy6"/>
                             <constraint firstItem="F60-pW-3bH" firstAttribute="leading" secondItem="E3a-0z-JQW" secondAttribute="leading" id="byt-Jk-c7t"/>
-                            <constraint firstItem="dBF-AS-j7S" firstAttribute="leading" secondItem="E3a-0z-JQW" secondAttribute="trailing" constant="8" symbolic="YES" id="cla-J8-Hy0"/>
                             <constraint firstItem="gO7-gm-1B7" firstAttribute="top" secondItem="E3a-0z-JQW" secondAttribute="bottom" constant="41" id="dx9-Ac-0sG"/>
                             <constraint firstItem="gO7-gm-1B7" firstAttribute="leading" secondItem="qEz-48-A1c" secondAttribute="leading" constant="1" id="fI6-DU-gOj"/>
-                            <constraint firstItem="E3a-0z-JQW" firstAttribute="baseline" secondItem="dBF-AS-j7S" secondAttribute="baseline" id="ifq-CX-fZc"/>
                             <constraint firstItem="0be-yS-rZn" firstAttribute="leading" secondItem="F60-pW-3bH" secondAttribute="trailing" constant="8" symbolic="YES" id="j7z-gD-g4i"/>
                             <constraint firstItem="F60-pW-3bH" firstAttribute="baseline" secondItem="0be-yS-rZn" secondAttribute="baseline" id="jUv-Sc-EuY"/>
                             <constraint firstItem="F60-pW-3bH" firstAttribute="top" secondItem="WbY-jR-zDy" secondAttribute="bottom" constant="25" id="n6F-KG-aRI"/>
                             <constraint firstItem="WbY-jR-zDy" firstAttribute="centerX" secondItem="5Yh-T2-wOJ" secondAttribute="centerX" id="phf-Tg-WTG"/>
+                            <constraint firstItem="ELr-CW-sEk" firstAttribute="centerY" secondItem="E3a-0z-JQW" secondAttribute="centerY" id="tD2-PF-gLz"/>
+                            <constraint firstItem="ELr-CW-sEk" firstAttribute="trailing" secondItem="0be-yS-rZn" secondAttribute="trailing" id="vYi-sO-ILT"/>
                             <constraint firstItem="5Yh-T2-wOJ" firstAttribute="top" secondItem="gO7-gm-1B7" secondAttribute="bottom" constant="22" id="vvr-iu-WHu"/>
                             <constraint firstItem="0be-yS-rZn" firstAttribute="baseline" secondItem="F60-pW-3bH" secondAttribute="firstBaseline" id="xBy-Bo-uje"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qEz-48-A1c"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contact Us" id="cwm-Jd-Byj"/>
+                    <connections>
+                        <outlet property="emailButton" destination="ELr-CW-sEk" id="o1q-Vk-T6H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chA-iS-09V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -474,6 +481,6 @@
         <image name="Screen Shot 2019-11-09 at 10.11.47 PM.png" width="369" height="195"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tDp-v0-g53"/>
+        <segue reference="Sxf-cm-qAM"/>
     </inferredMetricsTieBreakers>
 </document>

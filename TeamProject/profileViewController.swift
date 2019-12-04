@@ -27,5 +27,9 @@ class profileViewController: UIViewController{
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         emailField.text = email
         
+        
+       
     }
+    
+    
 }
