@@ -20,7 +20,7 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
    
     var email: String!
     var password: String!
-    var imageStore: ImageStore!
+    //var imageStore: ImageStore!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -30,7 +30,7 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     
-    @IBAction func cameraPressed(_ sender: Any) {
+    /*@IBAction func cameraPressed(_ sender: Any) {
         
         let imagePicker = UIImagePickerController()
         
@@ -47,20 +47,20 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
         // Place image picker on the screen
         present(imagePicker, animated: true, completion: nil)
         
-    }
+    }*/
     
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String: Any]) {
         
         // Get picked image from info dictionary
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        //let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         // Store the image in the ImageStore for the item's key
-        imageStore.setImage(image, forKey: "User" )
+        //imageStore.setImage(image, forKey: "User" )
         
         // Put that image onto the screen in our image view
-        userPicture.image = image
+        //userPicture.image = image
         
         // Take image picker off the screen -
         // you must call this dismiss method
