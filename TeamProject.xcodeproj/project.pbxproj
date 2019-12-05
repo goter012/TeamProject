@@ -25,6 +25,8 @@
 		ED2A00042387326E0081540A /* Screen Shot 2019-11-09 at 10.11.47 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2A00032387326E0081540A /* Screen Shot 2019-11-09 at 10.11.47 PM.png */; };
 		ED2A00062387381F0081540A /* createController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A00052387381F0081540A /* createController.swift */; };
 		ED2AFFFE23872F1D0081540A /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2AFFFD23872F1D0081540A /* PersistenceManager.swift */; };
+		ED7ACABA23972A140000E87E /* adoptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7ACAB923972A140000E87E /* adoptViewController.swift */; };
+		ED7ACABC239738C10000E87E /* dogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7ACABB239738C10000E87E /* dogDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		ED2A00052387381F0081540A /* createController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createController.swift; sourceTree = "<group>"; };
 		ED2AFFFD23872F1D0081540A /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		ED2AFFFF2387325E0081540A /* icons8-name-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-name-75.png"; sourceTree = "<group>"; };
+		ED7ACAB923972A140000E87E /* adoptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adoptViewController.swift; sourceTree = "<group>"; };
+		ED7ACABB239738C10000E87E /* dogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,15 +131,17 @@
 				8A14D8192384AFE200F0AE4C /* Main.storyboard */,
 				8E8015932388A19700393B1D /* contactUsController.swift */,
 				8E80158E238893BC00393B1D /* profileViewController.swift */,
+				ED7ACAB923972A140000E87E /* adoptViewController.swift */,
 				8E2C6BC32386039700169926 /* searchLayout.swift */,
+				8A5F0B282388A9F700BF7033 /* SearchController.swift */,
+				ED2A00052387381F0081540A /* createController.swift */,
 				8E2C6BBC2385F64200169926 /* DogViewController.swift */,
+				ED7ACABB239738C10000E87E /* dogDetailViewController.swift */,
 				8A14D81F2384AFE200F0AE4C /* Assets.xcassets */,
 				8A14D8212384AFE200F0AE4C /* LaunchScreen.storyboard */,
 				8A14D8242384AFE200F0AE4C /* Info.plist */,
 				8A14D81C2384AFE200F0AE4C /* TeamProject.xcdatamodeld */,
 				ED2AFFFD23872F1D0081540A /* PersistenceManager.swift */,
-				ED2A00052387381F0081540A /* createController.swift */,
-				8A5F0B282388A9F700BF7033 /* SearchController.swift */,
 			);
 			path = TeamProject;
 			sourceTree = "<group>";
@@ -295,11 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED7ACABC239738C10000E87E /* dogDetailViewController.swift in Sources */,
 				8A14D8182384AFE200F0AE4C /* ViewController.swift in Sources */,
 				8A5F0B292388A9F700BF7033 /* SearchController.swift in Sources */,
 				8E2C6BBD2385F64300169926 /* DogViewController.swift in Sources */,
 				8E2C6BC42386039700169926 /* searchLayout.swift in Sources */,
 				ED2AFFFE23872F1D0081540A /* PersistenceManager.swift in Sources */,
+				ED7ACABA23972A140000E87E /* adoptViewController.swift in Sources */,
 				ED2A00062387381F0081540A /* createController.swift in Sources */,
 				8A14D8162384AFE200F0AE4C /* AppDelegate.swift in Sources */,
 				8E80158F238893BC00393B1D /* profileViewController.swift in Sources */,
