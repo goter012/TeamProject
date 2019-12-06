@@ -406,7 +406,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilq-ki-ZUg">
-                                <rect key="frame" x="119" y="504" width="205" height="94"/>
+                                <rect key="frame" x="107" y="489" width="252" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -416,10 +416,20 @@
                         <color key="backgroundColor" red="0.7631797194480896" green="0.87388461828231812" blue="0.91766434907913208" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="PZN-zs-liN"/>
                     </view>
+                    <connections>
+                        <outlet property="ageLabel" destination="Fbe-U7-UZj" id="AWc-N4-xWO"/>
+                        <outlet property="breedLabel" destination="7BD-SU-uC2" id="C8s-qC-5nY"/>
+                        <outlet property="contactButton" destination="k6r-Rm-bcR" id="WvC-vZ-MHD"/>
+                        <outlet property="dogImage" destination="al3-Za-4QY" id="RzY-MJ-yUI"/>
+                        <outlet property="nameLabel" destination="9Ji-hj-HZL" id="f7s-S7-gW4"/>
+                        <outlet property="sexLabel" destination="U3e-1T-zHW" id="Hqc-Sf-35R"/>
+                        <outlet property="sizeLabel" destination="STA-hs-Coh" id="Hnf-hw-2Fe"/>
+                        <outlet property="storyLabel" destination="ilq-ki-ZUg" id="cbZ-vd-ccN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYP-Xf-nms" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1532" y="1075"/>
+            <point key="canvasLocation" x="1532" y="1074.5127436281859"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zKd-Xy-nKo">
