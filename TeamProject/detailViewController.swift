@@ -12,4 +12,8 @@ import UIKit
 class detailViewController: UIViewController{
 
 
+    var dog: Dog!
+    
+    
+    
 }
