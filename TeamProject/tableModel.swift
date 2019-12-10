@@ -68,7 +68,7 @@ final class tableModel{
         dog.breed = breed
         dog.dogDescription = description
         dog.name = name
-        dog.dogPic = dogPicPath
+        //dog.dogPic = dogPicPath
         data.saveContext()
         dogs.append(dog)
     }
