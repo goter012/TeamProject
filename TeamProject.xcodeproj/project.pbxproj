@@ -17,7 +17,6 @@
 		8A14D8392384AFE200F0AE4C /* TeamProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14D8382384AFE200F0AE4C /* TeamProjectUITests.swift */; };
 		8A5F0B292388A9F700BF7033 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F0B282388A9F700BF7033 /* SearchController.swift */; };
 		8E2C6BBD2385F64300169926 /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C6BBC2385F64200169926 /* DogViewController.swift */; };
-		8E2C6BC42386039700169926 /* searchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2C6BC32386039700169926 /* searchLayout.swift */; };
 		8E77CA40239EF6C80073026B /* tableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E77CA3F239EF6C80073026B /* tableModel.swift */; };
 		8E80158F238893BC00393B1D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E80158E238893BC00393B1D /* profileViewController.swift */; };
 		8E8015942388A19700393B1D /* contactUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8015932388A19700393B1D /* contactUsController.swift */; };
@@ -65,7 +64,6 @@
 		8A14D83A2384AFE200F0AE4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A5F0B282388A9F700BF7033 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		8E2C6BBC2385F64200169926 /* DogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewController.swift; sourceTree = "<group>"; };
-		8E2C6BC32386039700169926 /* searchLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchLayout.swift; sourceTree = "<group>"; };
 		8E77CA3F239EF6C80073026B /* tableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableModel.swift; sourceTree = "<group>"; };
 		8E80158E238893BC00393B1D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		8E8015932388A19700393B1D /* contactUsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactUsController.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 				8A14D8192384AFE200F0AE4C /* Main.storyboard */,
 				8E8015932388A19700393B1D /* contactUsController.swift */,
 				8E80158E238893BC00393B1D /* profileViewController.swift */,
-				8E2C6BC32386039700169926 /* searchLayout.swift */,
 				8E2C6BBC2385F64200169926 /* DogViewController.swift */,
 				8E9EF7622399D85E009BCA57 /* detailViewController.swift */,
 				8E9EF7602399D5E3009BCA57 /* tableViewCell.swift */,
@@ -310,7 +307,6 @@
 				8A14D8182384AFE200F0AE4C /* ViewController.swift in Sources */,
 				8A5F0B292388A9F700BF7033 /* SearchController.swift in Sources */,
 				8E2C6BBD2385F64300169926 /* DogViewController.swift in Sources */,
-				8E2C6BC42386039700169926 /* searchLayout.swift in Sources */,
 				ED2AFFFE23872F1D0081540A /* PersistenceManager.swift in Sources */,
 				8E9EF7612399D5E3009BCA57 /* tableViewCell.swift in Sources */,
 				ED2A00062387381F0081540A /* createController.swift in Sources */,
