@@ -51,6 +51,12 @@ let data = PersistenceManager.shared
 
 final class tableModel{
     
+     let dateFormatter = DateFormatter()
+    
+    
+    
+    var currentEmail:String = ""
+    var currentPassword: String = ""
     static let sharedInstance = tableModel()
     
     var dogs: [Dog] = []
@@ -68,7 +74,7 @@ final class tableModel{
         
         
         for i in 0...4{
-        createDog(age:ages[i],breed:breeds[i],description:descriptions[i],name:dogNames[i],dogPicPath:dogNames[i],sex:genders[i],size:weights[i])
+            createDog(age:ages[i],breed:breeds[i],description:descriptions[i],name:dogNames[i],dogPicPath:dogNames[i],sex:genders[i],size:weights[i])
         }
         
     }
@@ -99,8 +105,44 @@ final class tableModel{
         }catch{
             print("Failed to return dogs")
         }
-        print(dogs[1].name)
+        
         return dogs
+    }
+    
+    
+    func recordCurrentUser(_ email:String, _ password:String){
+        currentEmail = email
+        currentPassword = password
+    }
+    
+    func createUser(_ name:String,_ email:String,_ password: String, _ phoneNumber:String ) -> Bool{
+        let user = User(context:data.context)
+        
+        user.email = email
+        user.name = name
+        user.phoneNumber = phoneNumber
+        user.password = password
+        user.picture  = "Anonymous"
+        user.dateOfBirth = "1-Jan-2019"
+        data.saveContext()
+        
+        recordCurrentUser(email, password)
+        return true
+    }
+    
+    
+    
+    func fetchUser() -> User {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"User")
+        fetchRequest.predicate = NSPredicate(format:"email = %@ && password = %@",currentEmail,currentPassword)
+        do{
+            let user = try data.context.fetch(fetchRequest)
+            let object = user[0] as! User
+            return object
+        }catch{
+            print("Error")
+        }
+        return User()
     }
     
     func updateDog(age:String, breed:String,description:String, name:String,dogPicPath:String){

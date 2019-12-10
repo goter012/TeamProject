@@ -13,33 +13,33 @@ import CoreData
 class createController: UIViewController {
     
     let persistenceManager = PersistenceManager.shared
-
+    let model = tableModel.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       pwField.isSecureTextEntry = true
+       passwordField.isSecureTextEntry = true
     }
     
     
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var pwField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
     
+    @IBOutlet weak var emailField: UITextField!
+    
+    @IBOutlet weak var phoneNumField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     @IBAction func createPressed(_ sender: UIButton) {
         if (isValidEmail(email: emailField.text!)){
-        let context = persistenceManager.context
-        let entityName = NSEntityDescription.entity(forEntityName: "User", in: context)!
-        let user = NSManagedObject(entity: entityName, insertInto: context)
-        user.setValue(emailField.text, forKeyPath:"email")
-        user.setValue(pwField.text,forKeyPath:"password")
-        do{
-            try context.save()
-            print("Saved successfully")
-            
-        }catch let error as NSError{
-            print(error)
+            if(model.createUser(nameField.text!, emailField.text!, passwordField.text!, phoneNumField.text!)){
+                print("USER CREATED")
+            }else{
+                let alert = UIAlertController(title: "Error", message: "Error while creating account", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
+                self.present(alert, animated: true)
+            }
         }
-    
-        }else{
+        else{
             let alert = UIAlertController(title: "Error", message: "Invalid email", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -47,7 +47,7 @@ class createController: UIViewController {
             self.present(alert, animated: true)
             }
         }
-        
+    
     
 
     
@@ -58,5 +58,6 @@ class createController: UIViewController {
         return emailPred.evaluate(with: email)
     }
 }
+
 
 
