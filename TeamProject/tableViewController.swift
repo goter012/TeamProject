@@ -35,9 +35,10 @@ class tableViewController: UITableViewController{
         
         let dog = dogs.dogs[indexPath.row]
         
-        cell.dogName.text = dog.name
+        cell.dogName.text = dog.name 
         cell.breedType.text = dog.breed
         cell.dogPic.image = UIImage(named:dog.dogPic!)
+        
        
         return cell
     }
@@ -57,7 +58,7 @@ class tableViewController: UITableViewController{
                 // Get the contact associated with this row and pass it along
                 let dog = dogs.dogs[row]
                 let detailViewController = segue.destination as! detailViewController
-                //detailViewController.dog = dog
+                detailViewController.dog = dog
             }
         default:
             preconditionFailure("Unexpected segue identifier.")

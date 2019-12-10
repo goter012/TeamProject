@@ -18,4 +18,6 @@ class tableViewCell: UITableViewCell {
     @IBOutlet var breedType: UILabel!
     @IBOutlet var dogPic: UIImageView!
     
+    
+    
 }
