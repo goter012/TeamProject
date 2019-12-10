@@ -14,7 +14,7 @@ import CoreData
 class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
     
     let persistenceManager = PersistenceManager.shared
-    
+    let model = tableModel.sharedInstance
     
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passFIeld: UITextField!
@@ -53,6 +53,8 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
             fetchRequest.predicate = NSPredicate(format: "email == %@ && password == %@", emailField.text!, passFIeld.text!)
             let fetchedResults = try context.fetch(fetchRequest) as! [User]
             
+            
+            
             if (fetchedResults.count == 0){
                 
                 let alert = UIAlertController(title: "Error", message: "Invalid email or password", preferredStyle: .alert)
@@ -63,6 +65,8 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
                 
             
             }
+            
+            model.recordCurrentUser(emailField.text!, passFIeld.text!)
             
         }
         catch {
