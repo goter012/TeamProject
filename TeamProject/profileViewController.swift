@@ -23,7 +23,7 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
     var email: String!
     var password: String!
     var imageStore: ImageStore!
-    
+    var key :String!
     let dateFormatter = DateFormatter()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -41,7 +41,7 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
         phoneField.text = user.phoneNumber!
         birthdatePicker.date = dateFormatter.date(from:user.dateOfBirth!)!
         
-       
+       key = user.password
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -67,12 +67,17 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
         
         
         
+        
         present(imagePicker,animated:true,completion:nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
-       userPicture.image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        imageStore.setImage(image, forKey: key)
+        userPicture.image = image
+        dismiss(animated: true, completion: nil)
+        
     }
     
     

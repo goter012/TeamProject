@@ -113,17 +113,24 @@ final class tableModel{
     func recordCurrentUser(_ email:String, _ password:String){
         currentEmail = email
         currentPassword = password
+        
+        
+        
+       
     }
     
     func createUser(_ name:String,_ email:String,_ password: String, _ phoneNumber:String ) -> Bool{
         let user = User(context:data.context)
         
+    
         user.email = email
         user.name = name
         user.phoneNumber = phoneNumber
         user.password = password
         user.picture  = "Anonymous"
         user.dateOfBirth = "1-Jan-2019"
+        
+    
         data.saveContext()
         
         recordCurrentUser(email, password)
