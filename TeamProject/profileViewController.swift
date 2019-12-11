@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 import CoreData
 
-class profileViewController: UIViewController{
+class profileViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
-    
+    var imagePicker: UIImagePickerController!
     let model = tableModel.sharedInstance
     @IBOutlet var userPicture: UIImageView!
     @IBOutlet var nameField: UITextField!
@@ -22,7 +22,7 @@ class profileViewController: UIViewController{
    
     var email: String!
     var password: String!
-    
+    var imageStore: ImageStore!
     
     let dateFormatter = DateFormatter()
     override func viewWillAppear(_ animated: Bool) {
@@ -43,6 +43,38 @@ class profileViewController: UIViewController{
         
        
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        //Save changes
+        model.updateUser(name: nameField.text!, email: emailField.text!, phone: phoneField.text!, dateOfBirth: dateFormatter.string(from: birthdatePicker.date))
+        
+        
+    }
+    
+    
+    @IBAction func takePicture(_ sender: Any) {
+        
+        imagePicker = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            imagePicker.sourceType = .camera
+        }else{
+            imagePicker.sourceType = .photoLibrary
+        }
+        imagePicker.delegate = self as! UIImagePickerControllerDelegate as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        
+        
+        
+        present(imagePicker,animated:true,completion:nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        imagePicker.dismiss(animated: true, completion: nil)
+       userPicture.image = info[UIImagePickerControllerOriginalImage] as! UIImage
+    }
+    
     
     
 }

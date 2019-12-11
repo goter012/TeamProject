@@ -35,7 +35,13 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
         print("Hello")
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        
+        emailField.becomeFirstResponder()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

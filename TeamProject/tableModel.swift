@@ -53,7 +53,7 @@ final class tableModel{
     
      let dateFormatter = DateFormatter()
     
-    
+    var sortingAttribute = ""
     
     var currentEmail:String = ""
     var currentPassword: String = ""
@@ -131,7 +131,7 @@ final class tableModel{
     }
     
     
-    
+   
     func fetchUser() -> User {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"User")
         fetchRequest.predicate = NSPredicate(format:"email = %@ && password = %@",currentEmail,currentPassword)
@@ -144,7 +144,35 @@ final class tableModel{
         }
         return User()
     }
+    func logOutUser(){
+        currentEmail = ""
+        currentPassword = ""
+    }
     
+    
+    func updateUser(name:String,email:String,phone:String,dateOfBirth:String){
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"User")
+        
+        fetchRequest.predicate = NSPredicate(format:"password = %@",currentPassword)
+        
+        do{
+            let test = try data.context.fetch(fetchRequest)
+            let objectUpdate = test[0] as! User
+            objectUpdate.setValue(name,forKey:"name")
+            objectUpdate.setValue(email,forKey:"email")
+            objectUpdate.setValue(phone, forKey: "phoneNumber")
+            objectUpdate.setValue(dateOfBirth,forKey:"dateOfBirth")
+            
+            do{
+                try data.context.save()
+                recordCurrentUser(email, currentPassword)
+            }catch{
+                print("Error")
+            }
+        }catch{
+            print("Error trying to update")
+        }
+    }
     func updateDog(age:String, breed:String,description:String, name:String,dogPicPath:String){
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Dog")
         

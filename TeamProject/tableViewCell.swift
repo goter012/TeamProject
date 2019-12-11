@@ -12,11 +12,10 @@ import UIKit
 class tableViewCell: UITableViewCell {
 
     
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var dogName: UILabel!
-    @IBOutlet var breedLabel: UILabel!
-    @IBOutlet var breedType: UILabel!
+   
     @IBOutlet var dogPic: UIImageView!
+    
+    
     
     
     

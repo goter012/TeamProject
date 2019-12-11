@@ -24,6 +24,11 @@ class tableViewController: UITableViewController{
         super.viewWillAppear(animated)
         
         
+        
+        
+        tableView.reloadData()
+        
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,11 +40,12 @@ class tableViewController: UITableViewController{
         
         let dog = dogs.dogs[indexPath.row]
         
-        cell.dogName.text = dog.name 
-        cell.breedType.text = dog.breed
-        cell.dogPic.image = UIImage(named:dog.dogPic!)
         
        
+        
+        cell.dogPic.image = UIImage(named:dog.dogPic!)
+        
+        
         return cell
     }
     
