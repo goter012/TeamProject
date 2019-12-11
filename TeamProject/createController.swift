@@ -20,7 +20,10 @@ class createController: UIViewController {
        passwordField.isSecureTextEntry = true
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        nameField.becomeFirstResponder()
+    }
     @IBOutlet weak var nameField: UITextField!
     
     @IBOutlet weak var emailField: UITextField!

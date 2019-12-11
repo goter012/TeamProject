@@ -44,15 +44,14 @@ class tableViewController: UITableViewController{
        
         cell.selectionStyle = .none
         cell.dogPic.image = UIImage(named:dog.dogPic!)
-        
-        
+        cell.nameLabel.text = dog.name
+        cell.breedLabel.text = dog.breed
+        cell.layer.borderColor = UIColor .gray.cgColor
+        cell.layer.borderWidth = 2
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
-        
-        return 185.0
-    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // If the triggered segue is the "showItem" segue
         

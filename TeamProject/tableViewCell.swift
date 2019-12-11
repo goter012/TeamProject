@@ -12,7 +12,9 @@ import UIKit
 class tableViewCell: UITableViewCell {
 
     
-   
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var breedLabel: UILabel!
     @IBOutlet var dogPic: UIImageView!
     
     

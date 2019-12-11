@@ -38,7 +38,8 @@ class detailViewController: UIViewController{
         breedLabel.text = dog.breed
         sizeLabel.text = dog.size
         descriptionText.text = dog.dogDescription
-        
+        dogImage.layer.cornerRadius = 50
+        descriptionText.isEditable = false
         descriptionText.flashScrollIndicators()
     }
 }

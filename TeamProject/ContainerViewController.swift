@@ -20,7 +20,7 @@ class ContainerViewController: UIViewController{
         super.viewDidLoad()
         
         containerView.layer.borderWidth = 10
-        containerView.layer.borderColor = UIColor.white.cgColor
+        containerView.layer.borderColor = UIColor.lightGray.cgColor
         containerView.layer.cornerRadius = 10
         containerView.layer.masksToBounds = true
         

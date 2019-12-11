@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31A1899823A14C2100F368ED /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A1899623A14C2100F368ED /* CustomTableViewCell.swift */; };
+		31A1899923A14C2100F368ED /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A1899723A14C2100F368ED /* CustomTableViewCell.xib */; };
 		31E248FC23A0780F00FDBA2A /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E248FB23A0780F00FDBA2A /* ImageStore.swift */; };
 		8A14D8162384AFE200F0AE4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14D8152384AFE200F0AE4C /* AppDelegate.swift */; };
 		8A14D8182384AFE200F0AE4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14D8172384AFE200F0AE4C /* ViewController.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31A1899623A14C2100F368ED /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		31A1899723A14C2100F368ED /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		31E248FB23A0780F00FDBA2A /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		8A14D8122384AFE200F0AE4C /* TeamProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A14D8152384AFE200F0AE4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				8A5F0B282388A9F700BF7033 /* SearchController.swift */,
 				31E248FB23A0780F00FDBA2A /* ImageStore.swift */,
 				EDD757AE23A0AC0F00B909DB /* ContainerViewController.swift */,
+				31A1899623A14C2100F368ED /* CustomTableViewCell.swift */,
+				31A1899723A14C2100F368ED /* CustomTableViewCell.xib */,
 			);
 			path = TeamProject;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED2A00002387325F0081540A /* icons8-name-75.png in Resources */,
+				31A1899923A14C2100F368ED /* CustomTableViewCell.xib in Resources */,
 				8A14D8232384AFE200F0AE4C /* LaunchScreen.storyboard in Resources */,
 				ED2A0002238732680081540A /* icons8-dog-paw-75.png in Resources */,
 				8A14D8202384AFE200F0AE4C /* Assets.xcassets in Resources */,
@@ -322,6 +329,7 @@
 				ED2A00062387381F0081540A /* createController.swift in Sources */,
 				8E9EF7632399D85E009BCA57 /* detailViewController.swift in Sources */,
 				31E248FC23A0780F00FDBA2A /* ImageStore.swift in Sources */,
+				31A1899823A14C2100F368ED /* CustomTableViewCell.swift in Sources */,
 				8A14D8162384AFE200F0AE4C /* AppDelegate.swift in Sources */,
 				EDD757AF23A0AC0F00B909DB /* ContainerViewController.swift in Sources */,
 				8E80158F238893BC00393B1D /* profileViewController.swift in Sources */,

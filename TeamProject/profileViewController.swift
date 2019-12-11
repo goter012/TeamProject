@@ -40,7 +40,9 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
         emailField.text = user.email!
         phoneField.text = user.phoneNumber!
         birthdatePicker.date = dateFormatter.date(from:user.dateOfBirth!)!
-        
+        birthdatePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        birthdatePicker.setValue(false,forKey:"highlightsToday")
+    
 //       key = user.image
     }
     
