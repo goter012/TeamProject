@@ -35,7 +35,7 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
        
        let user = model.fetchUser()
        
-        userPicture.image = UIImage(named:user.picture!)
+        
         nameField.text = user.name!
         emailField.text = user.email!
         phoneField.text = user.phoneNumber!
@@ -74,11 +74,14 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
         imagePicker.dismiss(animated: true, completion: nil)
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        imageStore.setImage(image, forKey:UUID().uuidString )
+        //imageStore.setImage(image, forKey:UUID().uuidString )
+        
+        print(image.size)
         userPicture.image = image
-        dismiss(animated: true, completion: nil)
+        
         
     }
     

@@ -197,7 +197,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qEz-48-A1c"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contact Us" id="cwm-Jd-Byj"/>
+                    <tabBarItem key="tabBarItem" title="Contact Us" image="icons8-phone-contact-25" selectedImage="icons8-phone-contact-25" id="cwm-Jd-Byj"/>
                     <connections>
                         <outlet property="emailButton" destination="ELr-CW-sEk" id="o1q-Vk-T6H"/>
                     </connections>
@@ -206,7 +206,7 @@
             </objects>
             <point key="canvasLocation" x="-570.39999999999998" y="1523.3883058470765"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="QIO-0w-UFJ">
             <objects>
                 <viewController id="I3L-XX-hIH" customClass="profileViewController" customModule="TeamProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -258,7 +258,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1pu-e2-HJJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Anonymous" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pu-e2-HJJ">
                                 <rect key="frame" x="92" y="88" width="275" height="230"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRA-nE-NTb">
@@ -266,7 +266,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="AJs-uX-vjA"/>
                                 </constraints>
-                                <state key="normal" image="Camera"/>
+                                <state key="normal" image="icons8-camera-50 (1)"/>
                                 <connections>
                                     <action selector="takePicture:" destination="I3L-XX-hIH" eventType="touchUpInside" id="Zbj-w2-efZ"/>
                                 </connections>
@@ -313,7 +313,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3qE-NA-sd9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="IcO-zt-0Y2"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="icons8-profile-25" selectedImage="icons8-profile-25" id="IcO-zt-0Y2">
+                        <color key="badgeColor" red="0.77694755792617798" green="0.79988163709640503" blue="0.90208160877227783" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -518,7 +520,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llJ-AT-XFS">
-                                <rect key="frame" x="118.5" y="578.5" width="37.5" height="21"/>
+                                <rect key="frame" x="118.5" y="578.5" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -628,9 +630,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
                     <connections>
+                        <segue destination="8X3-H1-BNT" kind="relationship" relationship="viewControllers" id="3E3-sa-Oew"/>
                         <segue destination="I3L-XX-hIH" kind="relationship" relationship="viewControllers" id="dm3-dO-7Vn"/>
                         <segue destination="vNa-yr-qmE" kind="relationship" relationship="viewControllers" id="F98-UL-Al2"/>
-                        <segue destination="8X3-H1-BNT" kind="relationship" relationship="viewControllers" id="3E3-sa-Oew"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QyA-xI-obT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -748,8 +750,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Camera" width="50" height="50"/>
+        <image name="Anonymous" width="632" height="626"/>
         <image name="Screen Shot 2019-11-09 at 10.11.47 PM.png" width="369" height="195"/>
+        <image name="icons8-camera-50 (1)" width="50" height="50"/>
+        <image name="icons8-phone-contact-25" width="25" height="25"/>
+        <image name="icons8-profile-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XkF-K6-kUd"/>
