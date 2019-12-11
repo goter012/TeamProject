@@ -130,7 +130,7 @@ final class tableModel{
         user.password = password
         user.picture  = "Anonymous"
         user.dateOfBirth = "1-Jan-2019"
-        user.image = UUID().uuidString
+//        user.image = UUID().uuidString
     
         data.saveContext()
         

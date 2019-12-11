@@ -42,7 +42,7 @@ class tableViewController: UITableViewController{
         
         
        
-        
+        cell.selectionStyle = .none
         cell.dogPic.image = UIImage(named:dog.dogPic!)
         
         

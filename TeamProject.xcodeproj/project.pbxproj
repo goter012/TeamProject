@@ -30,6 +30,7 @@
 		ED2A00042387326E0081540A /* Screen Shot 2019-11-09 at 10.11.47 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2A00032387326E0081540A /* Screen Shot 2019-11-09 at 10.11.47 PM.png */; };
 		ED2A00062387381F0081540A /* createController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A00052387381F0081540A /* createController.swift */; };
 		ED2AFFFE23872F1D0081540A /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2AFFFD23872F1D0081540A /* PersistenceManager.swift */; };
+		EDD757AF23A0AC0F00B909DB /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD757AE23A0AC0F00B909DB /* ContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		ED2A00052387381F0081540A /* createController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createController.swift; sourceTree = "<group>"; };
 		ED2AFFFD23872F1D0081540A /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		ED2AFFFF2387325E0081540A /* icons8-name-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-name-75.png"; sourceTree = "<group>"; };
+		EDD757AE23A0AC0F00B909DB /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				ED2A00052387381F0081540A /* createController.swift */,
 				8A5F0B282388A9F700BF7033 /* SearchController.swift */,
 				31E248FB23A0780F00FDBA2A /* ImageStore.swift */,
+				EDD757AE23A0AC0F00B909DB /* ContainerViewController.swift */,
 			);
 			path = TeamProject;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				8E9EF7632399D85E009BCA57 /* detailViewController.swift in Sources */,
 				31E248FC23A0780F00FDBA2A /* ImageStore.swift in Sources */,
 				8A14D8162384AFE200F0AE4C /* AppDelegate.swift in Sources */,
+				EDD757AF23A0AC0F00B909DB /* ContainerViewController.swift in Sources */,
 				8E80158F238893BC00393B1D /* profileViewController.swift in Sources */,
 				8E9EF75F2399D145009BCA57 /* tableViewController.swift in Sources */,
 				8A14D81E2384AFE200F0AE4C /* TeamProject.xcdatamodeld in Sources */,
@@ -491,11 +495,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M8ZY3QT2U9;
+				DEVELOPMENT_TEAM = NNTJ386Z89;
 				INFOPLIST_FILE = TeamProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aul.cs.fiu.edu.TeamProject;
+				PRODUCT_BUNDLE_IDENTIFIER = "aul.cs.fiu.edu.TeamProject-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -507,11 +511,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M8ZY3QT2U9;
+				DEVELOPMENT_TEAM = NNTJ386Z89;
 				INFOPLIST_FILE = TeamProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aul.cs.fiu.edu.TeamProject;
+				PRODUCT_BUNDLE_IDENTIFIER = "aul.cs.fiu.edu.TeamProject-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
