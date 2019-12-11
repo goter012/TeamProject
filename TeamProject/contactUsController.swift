@@ -24,7 +24,7 @@ class contactUsViewController: UIViewController,MFMailComposeViewControllerDeleg
         super.viewWillAppear(animated)
         
         
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
         emailButton.titleLabel?.text = "resqmedogmission@aol.com"
     }
     
