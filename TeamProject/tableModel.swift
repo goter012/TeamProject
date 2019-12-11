@@ -89,6 +89,7 @@ final class tableModel{
         dog.dogPic = dogPicPath
         dog.sex = sex
         dog.size = size
+        
         data.saveContext()
         dogs.append(dog)
         
@@ -129,7 +130,7 @@ final class tableModel{
         user.password = password
         user.picture  = "Anonymous"
         user.dateOfBirth = "1-Jan-2019"
-        
+        user.image = UUID().uuidString
     
         data.saveContext()
         
