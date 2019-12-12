@@ -618,7 +618,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dxd-ht-5vK">
-                                <rect key="frame" x="20" y="409" width="398" height="45"/>
+                                <rect key="frame" x="20" y="316" width="398" height="45"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="I8G-BJ-9T1"/>
@@ -628,10 +628,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2019-11-09 at 10.11.47 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="BDv-oA-8gm">
-                                <rect key="frame" x="20" y="71" width="398" height="300"/>
+                                <rect key="frame" x="20" y="115" width="398" height="163"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u1o-Jh-sZA">
-                                <rect key="frame" x="20" y="695" width="398" height="45"/>
+                                <rect key="frame" x="20" y="602" width="398" height="45"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="bTE-LC-lvw"/>
@@ -641,7 +641,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Jf-ug-y0x">
-                                <rect key="frame" x="20" y="599" width="398" height="45"/>
+                                <rect key="frame" x="20" y="506" width="398" height="45"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="aV9-wg-ER1"/>
@@ -651,7 +651,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8cE-sc-I3T">
-                                <rect key="frame" x="20" y="505" width="398" height="45"/>
+                                <rect key="frame" x="20" y="412" width="398" height="45"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="fvC-ac-zAK"/>
@@ -661,7 +661,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3Q-CP-vhx">
-                                <rect key="frame" x="20" y="798" width="398" height="52"/>
+                                <rect key="frame" x="20" y="705" width="398" height="52"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnk-Yn-tzI">
                                         <rect key="frame" x="171" y="11" width="56" height="30"/>
@@ -726,7 +726,7 @@
         <image name="icons8-profile-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XkF-K6-kUd"/>
+        <segue reference="OKm-4Z-HGY"/>
         <segue reference="mds-1n-eLl"/>
     </inferredMetricsTieBreakers>
 </document>

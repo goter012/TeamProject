@@ -1,16 +1,20 @@
-//
-//  ViewController.swift
-//  TeamProject
-//
-//  Created by guillermo j otero jr on 11/19/19.
-//  Copyright © 2019 guillermo j otero jr. All rights reserved.
-//
+//  PROGRAMMER: Team G (Elliott, Sacha, Guillermo)
+
+//  PANTHERID:  5769664
+
+//  CLASS:          COP 4655 T/TH 5:00
+
+//  INSTRUCTOR:     Steve Luis  ECS 282
+
+//  ASSIGNMENT:     Team Project
+
+//  DUE:            Thursday 12/12/19
 
 import UIKit
 import CoreData
 
 
-
+// This class is the controller for the Log In
 class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
     
     let persistenceManager = PersistenceManager.shared
@@ -49,7 +53,7 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
     
     
     
-    
+    // Logs User in to account.
     @IBAction func logInPressed(_ sender: Any) {
         
         let context = persistenceManager.context

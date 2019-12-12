@@ -1,15 +1,19 @@
-//
-//  profileViewController.swift
-//  TeamProject
-//
-//  Created by Gemma Velasco on 11/22/19.
-//  Copyright © 2019 guillermo j otero jr. All rights reserved.
-//
+//  PROGRAMMER: Team G (Elliott, Sacha, Guillermo)
+
+//  PANTHERID:  5769664
+
+//  CLASS:          COP 4655 T/TH 5:00
+
+//  INSTRUCTOR:     Steve Luis  ECS 282
+
+//  ASSIGNMENT:     Team Project
+
+//  DUE:            Thursday 12/12/19
 
 import Foundation
 import UIKit
 import CoreData
-
+// This class is for the Porfile View Controller
 class profileViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     var imagePicker: UIImagePickerController!
@@ -54,7 +58,7 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
         
 //       key = user.image
     }
-    
+    // Deletes user Account from app
     @IBAction func deleteUser(_ sender: Any) {
         let alert = UIAlertController(title: "Account Management", message: "Do you want to delete your account?", preferredStyle: .alert)
         
@@ -91,7 +95,7 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
         
         return newImage!
     }
-    
+    // Updates User changes to profile
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -107,7 +111,7 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
         
     }
     
-    
+    // Takes picture for UI Image View
     @IBAction func takePicture(_ sender: Any) {
         
         imagePicker = UIImagePickerController()

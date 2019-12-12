@@ -1,14 +1,18 @@
-//
-//  tableModel.swift
-//  TeamProject
-//
-//  Created by Gemma Velasco on 12/9/19.
-//  Copyright © 2019 guillermo j otero jr. All rights reserved.
-//
+//  PROGRAMMER: Team G (Elliott, Sacha, Guillermo)
+
+//  PANTHERID:  5769664
+
+//  CLASS:          COP 4655 T/TH 5:00
+
+//  INSTRUCTOR:     Steve Luis  ECS 282
+
+//  ASSIGNMENT:     Team Project
+
+//  DUE:            Thursday 12/12/19
 
 import Foundation
 
-
+// Model for App
 
 /*class dogs: NSObject {
     
@@ -72,7 +76,7 @@ final class tableModel{
     
     //let dogColors
     
-    //NEED TO ADD COLOR AS ATTRIBUTE TO DOG ENTITY
+    //Creates Dummy data for table view.
     func addData(){
         
         for i in 0...4{
@@ -81,7 +85,7 @@ final class tableModel{
         
         
     }
-    
+    // Creates dog to be stored in Core Data
     func createDog(age:String, breed: String,description:String,name:String,dogPicPath: String,sex:String,size:String){
         let dog = Dog(context:data.context)
         
@@ -112,7 +116,7 @@ final class tableModel{
         
         return dogs
     }
-    
+    // Deletes dog stored in Core Data
     func deleteAllDogs(){
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Dog")
         do{
@@ -125,13 +129,14 @@ final class tableModel{
             print("Error")
         }
     }
+    // Keeps track of current user logged in
     func recordCurrentUser(_ email:String, _ password:String){
         currentEmail = email
         currentPassword = password
         
        
     }
-    
+    // Creates User to be stored in Core data
     func createUser(_ name:String,_ email:String,_ password: String, _ phoneNumber:String ) -> Bool{
         let user = User(context:data.context)
         
@@ -151,7 +156,7 @@ final class tableModel{
     }
     
     
-   
+   // Fetches User data
     func fetchUser() -> User {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"User")
         fetchRequest.predicate = NSPredicate(format:"email = %@ && password = %@",currentEmail,currentPassword)
@@ -169,7 +174,7 @@ final class tableModel{
         currentPassword = ""
     }
     
-    
+    // Updates User changes in Profile view
     func updateUser(name:String,email:String,phone:String,dateOfBirth:String){
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"User")
         
@@ -202,6 +207,7 @@ final class tableModel{
             print("Error trying to update")
         }
     }
+    // Updates Dog
     func updateDog(age:String, breed:String,description:String, name:String,dogPicPath:String){
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Dog")
         
@@ -223,7 +229,7 @@ final class tableModel{
             print("Error trying to update")
         }
     }
-    
+    // Deletes Dog
     func deleteDog(name:String){
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Dog")
         fetchRequest.predicate = NSPredicate(format:"name = %@",name)
@@ -242,7 +248,7 @@ final class tableModel{
             print("Error deleting dog")
         }
     }
-    
+    // Deletes User from entity in Core data.
     func deleteUser(){
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"User")
         fetchRequest.predicate = NSPredicate(format:"email = %@ && password = %@",currentEmail,currentPassword)

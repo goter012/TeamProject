@@ -1,10 +1,14 @@
-//
-//  SearchController.swift
-//  TeamProject
-//
-//  Created by guillermo j otero jr on 11/22/19.
-//  Copyright © 2019 guillermo j otero jr. All rights reserved.
-//
+//  PROGRAMMER: Team G (Elliott, Sacha, Guillermo)
+
+//  PANTHERID:  5769664
+
+//  CLASS:          COP 4655 T/TH 5:00
+
+//  INSTRUCTOR:     Steve Luis  ECS 282
+
+//  ASSIGNMENT:     Team Project
+
+//  DUE:            Thursday 12/12/19
 
 import Foundation
 import UIKit
