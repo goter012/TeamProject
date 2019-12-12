@@ -56,7 +56,7 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
     }
     
     @IBAction func deleteUser(_ sender: Any) {
-        let alert = UIAlertController(title: "Error", message: "Invalid email or password", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Account Management", message: "Do you want to delete your account?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "YES", style: .default, handler: {(alert:UIAlertAction) in self.model.deleteUser()
             self.performSegue(withIdentifier: "delete", sender: (Any).self)
