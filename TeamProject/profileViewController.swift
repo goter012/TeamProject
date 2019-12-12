@@ -50,6 +50,8 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
         birthdatePicker.setValue(false,forKey:"highlightsToday")
         
         
+   
+        
 //       key = user.image
     }
     
@@ -85,8 +87,14 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+        
         //Save changes
-        model.updateUser(name: nameField.text!, email: emailField.text!, phone: phoneField.text!, dateOfBirth: dateFormatter.string(from: birthdatePicker.date))
+       
+            
+        
+            model.updateUser(name: nameField.text!, email: emailField.text!, phone: phoneField.text!, dateOfBirth: dateFormatter.string(from: birthdatePicker.date))
+        
+        
         
         
     }

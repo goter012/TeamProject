@@ -129,8 +129,6 @@ final class tableModel{
         currentEmail = email
         currentPassword = password
         
-        
-        
        
     }
     
@@ -179,11 +177,20 @@ final class tableModel{
         
         do{
             let test = try data.context.fetch(fetchRequest)
-            let objectUpdate = test[0] as! User
-            objectUpdate.setValue(name,forKey:"name")
-            objectUpdate.setValue(email,forKey:"email")
-            objectUpdate.setValue(phone, forKey: "phoneNumber")
-            objectUpdate.setValue(dateOfBirth,forKey:"dateOfBirth")
+           
+            
+            if (test.count == 0){
+                
+            }else{
+                let objectUpdate = test[0] as! User
+                
+                
+                objectUpdate.setValue(name,forKey:"name")
+                objectUpdate.setValue(email,forKey:"email")
+                objectUpdate.setValue(phone, forKey: "phoneNumber")
+                objectUpdate.setValue(dateOfBirth,forKey:"dateOfBirth")
+            }
+            
             
             do{
                 try data.context.save()
@@ -237,7 +244,7 @@ final class tableModel{
     }
     
     func deleteUser(){
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Dog")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"User")
         fetchRequest.predicate = NSPredicate(format:"email = %@ && password = %@",currentEmail,currentPassword)
         
         do{
