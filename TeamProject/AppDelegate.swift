@@ -14,8 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     //var shared = AppDelegate()
-
+    let model = tableModel.sharedInstance
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        //model.deleteAllDogs()
+        //model.addData()
         // Override point for customization after application launch.
         return true
     }

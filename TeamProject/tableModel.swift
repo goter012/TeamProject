@@ -55,6 +55,9 @@ final class tableModel{
     
     var sortingAttribute = ""
     
+    var selectedText = ""
+    var selectedDog: Dog!
+    
     var currentEmail:String = ""
     var currentPassword: String = ""
     static let sharedInstance = tableModel()
@@ -70,12 +73,12 @@ final class tableModel{
     //let dogColors
     
     //NEED TO ADD COLOR AS ATTRIBUTE TO DOG ENTITY
-    init(){
-        
+    func addData(){
         
         for i in 0...4{
-            createDog(age:ages[i],breed:breeds[i],description:descriptions[i],name:dogNames[i],dogPicPath:dogNames[i],sex:genders[i],size:weights[i])
+            createDog(age: ages[i], breed: breeds[i], description: descriptions[i], name: dogNames[i], dogPicPath: dogNames[i], sex: genders[i], size: weights[i])
         }
+        
         
     }
     
@@ -91,7 +94,7 @@ final class tableModel{
         dog.size = size
         
         data.saveContext()
-        dogs.append(dog)
+        
         
         print("Dog created")
     }
@@ -110,7 +113,18 @@ final class tableModel{
         return dogs
     }
     
-    
+    func deleteAllDogs(){
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Dog")
+        do{
+            let result = try data.context.fetch(fetchRequest) as! [Dog]
+            for item in result{
+                data.context.delete(item)
+            }
+            try data.context.save()
+        }catch{
+            print("Error")
+        }
+    }
     func recordCurrentUser(_ email:String, _ password:String){
         currentEmail = email
         currentPassword = password
@@ -222,4 +236,22 @@ final class tableModel{
         }
     }
     
+    func deleteUser(){
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Dog")
+        fetchRequest.predicate = NSPredicate(format:"email = %@ && password = %@",currentEmail,currentPassword)
+        
+        do{
+            let test = try data.context.fetch(fetchRequest)
+            
+            let objectToDelete = test[0] as! NSManagedObject
+            data.context.delete(objectToDelete)
+            do{
+                try data.context.save()
+            }catch{
+                print("Error saving deletion of dog")
+            }
+        }catch{
+            print("Error deleting dog")
+        }
+    }
 }

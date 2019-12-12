@@ -20,6 +20,7 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
     @IBOutlet var phoneField: UITextField!
     @IBOutlet var birthdatePicker: UIDatePicker!
    
+    @IBOutlet weak var deleteLabel: UIButton!
     var email: String!
     var password: String!
     var imageStore: ImageStore!
@@ -29,6 +30,11 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
         super.viewWillAppear(animated)
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        
+        
+        deleteLabel.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+        
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         dateFormatter.dateFormat = "d-MMM-YYYY"
@@ -42,8 +48,38 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
         birthdatePicker.date = dateFormatter.date(from:user.dateOfBirth!)!
         birthdatePicker.setValue(UIColor.white, forKeyPath: "textColor")
         birthdatePicker.setValue(false,forKey:"highlightsToday")
-    
+        
+        
 //       key = user.image
+    }
+    
+    @IBAction func deleteUser(_ sender: Any) {
+        model.deleteUser()
+    }
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        let size = image.size
+        
+        let widthRatio  = targetSize.width  / size.width
+        let heightRatio = targetSize.height / size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width:size.width * heightRatio, height:size.height * heightRatio)
+        } else {
+            newSize = CGSize(width:size.width * widthRatio,  height:size.height * widthRatio)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(x:0, y:0, width:newSize.width, height:newSize.height)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
     
     override func viewWillDisappear(_ animated: Bool) {

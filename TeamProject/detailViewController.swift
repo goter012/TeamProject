@@ -13,7 +13,7 @@ class detailViewController: UIViewController{
 
 
     var dog: Dog!
-    
+    let model = tableModel.sharedInstance
     
     @IBOutlet weak var dogImage: UIImageView!
     
@@ -31,6 +31,7 @@ class detailViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        dog = model.selectedDog
         dogImage.image = UIImage(named:dog.dogPic!)
         nameLabel.text = dog.name
         ageLabel.text = dog.age

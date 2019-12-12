@@ -9,11 +9,14 @@
 import Foundation
 
 import UIKit
-class ContainerViewController: UIViewController{
+class ContainerViewController: UIViewController,UISearchBarDelegate{
 
     
-    
+  let model = tableModel.sharedInstance
     @IBOutlet weak var containerView: UIView!
+    
+    
+    
     
     
     override func viewDidLoad() {
@@ -23,6 +26,7 @@ class ContainerViewController: UIViewController{
         containerView.layer.borderColor = UIColor.lightGray.cgColor
         containerView.layer.cornerRadius = 10
         containerView.layer.masksToBounds = true
+        
         
     }
 }

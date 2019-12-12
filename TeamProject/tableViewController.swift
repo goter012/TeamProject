@@ -10,38 +10,76 @@ import Foundation
 import UIKit
 import CoreData
 
-class tableViewController: UITableViewController{
+class tableViewController: UITableViewController,UISearchBarDelegate{
     
     let dogs = tableModel.sharedInstance
     
+    let data = PersistenceManager.shared
     
+    
+    var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>!
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Dog")
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key:"name",ascending:true)]
+        fetchedResultsController = NSFetchedResultsController(fetchRequest:fetchRequest,managedObjectContext:data.context,sectionNameKeyPath:nil,cacheName:nil)
+        searchBar.delegate = self
+        
+       
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
-        
+        do{
+            try fetchedResultsController.performFetch()
+        }catch{
+            print("Core Data: couldnt fetch dogs")
+        }
         
         tableView.reloadData()
         
         
+        
+        
     }
     
+    func reconstructFetchResults(){
+        fetchedResultsController = NSFetchedResultsController(fetchRequest:fetchRequest,managedObjectContext:data.context,sectionNameKeyPath:nil,cacheName:nil)
+        do {try fetchedResultsController.performFetch()}
+        catch {print("CoreData: couldnt fetch events")}
+        tableView.reloadData()
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        dogs.selectedDog = fetchedResultsController.object(at:indexPath) as! Dog
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dogs.dogs.count
+        
+        return fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        print(searchText)
+        if(searchText != ""){
+            fetchRequest.predicate = NSPredicate(format:"name CONTAINS[cd] %@",searchText)
+            reconstructFetchResults()
+            
+        }else{
+            fetchRequest.predicate = nil
+            reconstructFetchResults()
+        }
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! tableViewCell
         
-        let dog = dogs.dogs[indexPath.row]
-        
-        
-       
+        let dog = fetchedResultsController.object(at:indexPath) as! Dog
         cell.selectionStyle = .none
         cell.dogPic.image = UIImage(named:dog.dogPic!)
         cell.nameLabel.text = dog.name
@@ -61,9 +99,9 @@ class tableViewController: UITableViewController{
             if let row = tableView.indexPathForSelectedRow?.row {
                 
                 // Get the contact associated with this row and pass it along
-                let dog = dogs.dogs[row]
+               
                 let detailViewController = segue.destination as! detailViewController
-                detailViewController.dog = dog
+                
             }
         default:
             preconditionFailure("Unexpected segue identifier.")
