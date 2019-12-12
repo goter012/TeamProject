@@ -197,7 +197,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qEz-48-A1c"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contact Us" id="cwm-Jd-Byj"/>
+                    <tabBarItem key="tabBarItem" title="Contact Us" image="icons8-phone-contact-25" selectedImage="icons8-phone-contact-25" id="cwm-Jd-Byj"/>
                     <connections>
                         <outlet property="emailButton" destination="ELr-CW-sEk" id="o1q-Vk-T6H"/>
                     </connections>
@@ -258,7 +258,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1pu-e2-HJJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Anonymous" translatesAutoresizingMaskIntoConstraints="NO" id="1pu-e2-HJJ">
                                 <rect key="frame" x="92" y="88" width="275" height="230"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRA-nE-NTb">
@@ -266,7 +266,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="AJs-uX-vjA"/>
                                 </constraints>
-                                <state key="normal" image="Camera"/>
+                                <state key="normal" image="icons8-camera-50 (1)"/>
                                 <connections>
                                     <action selector="takePicture:" destination="I3L-XX-hIH" eventType="touchUpInside" id="Zbj-w2-efZ"/>
                                 </connections>
@@ -286,7 +286,6 @@
                                 </state>
                                 <connections>
                                     <action selector="deleteUser:" destination="I3L-XX-hIH" eventType="touchUpInside" id="BUc-lj-vR5"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="lAz-OJ-deN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -325,7 +324,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3qE-NA-sd9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="IcO-zt-0Y2"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="icons8-profile-25" selectedImage="icons8-profile-25" id="IcO-zt-0Y2"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -335,6 +334,7 @@
                         <outlet property="nameField" destination="nJ9-ys-F41" id="krp-I5-8rs"/>
                         <outlet property="phoneField" destination="bhi-C8-8lF" id="HbM-ox-ewJ"/>
                         <outlet property="userPicture" destination="1pu-e2-HJJ" id="im6-B2-BkQ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="delete" id="mds-1n-eLl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZV-Oq-iuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -363,14 +363,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c0b-9C-bWK">
-                                            <rect key="frame" x="16" y="11" width="101" height="133"/>
+                                            <rect key="frame" x="20" y="11" width="101" height="133"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="101" id="7bo-xy-pPT"/>
                                                 <constraint firstAttribute="height" constant="133" id="cMR-if-Xcz"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mez-VX-20G">
-                                            <rect key="frame" x="140" y="97.5" width="44" height="21"/>
+                                            <rect key="frame" x="144" y="97.5" width="44" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="cT8-0s-ZCf"/>
                                             </constraints>
@@ -379,7 +379,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNU-7i-AOg">
-                                            <rect key="frame" x="140" y="26" width="44" height="19.5"/>
+                                            <rect key="frame" x="144" y="26" width="274" height="19.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -719,11 +719,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Camera" width="50" height="50"/>
+        <image name="Anonymous" width="632" height="626"/>
         <image name="Screen Shot 2019-11-09 at 10.11.47 PM.png" width="369" height="195"/>
+        <image name="icons8-camera-50 (1)" width="50" height="50"/>
+        <image name="icons8-phone-contact-25" width="25" height="25"/>
+        <image name="icons8-profile-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XkF-K6-kUd"/>
-        <segue reference="lAz-OJ-deN"/>
+        <segue reference="mds-1n-eLl"/>
     </inferredMetricsTieBreakers>
 </document>

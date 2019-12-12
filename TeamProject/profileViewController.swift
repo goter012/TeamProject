@@ -41,7 +41,7 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
        
        let user = model.fetchUser()
        
-        userPicture.image = UIImage(named:user.picture!)
+        
         nameField.text = user.name!
         emailField.text = user.email!
         phoneField.text = user.phoneNumber!
@@ -56,7 +56,15 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
     }
     
     @IBAction func deleteUser(_ sender: Any) {
-        model.deleteUser()
+        let alert = UIAlertController(title: "Error", message: "Invalid email or password", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "YES", style: .default, handler: {(alert:UIAlertAction) in self.model.deleteUser()
+            self.performSegue(withIdentifier: "delete", sender: (Any).self)
+        }))
+        alert.addAction(UIAlertAction(title: "NO", style: .default, handler: nil))
+        self.present(alert, animated: true)
+       
+        
     }
     func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
         let size = image.size
@@ -118,9 +126,9 @@ class profileViewController: UIViewController,UIImagePickerControllerDelegate,UI
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        imagePicker.dismiss(animated: true, completion: nil)
+        //imagePicker.dismiss(animated: true, completion: nil)
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        imageStore.setImage(image, forKey:UUID().uuidString )
+        //imageStore.setImage(image, forKey:UUID().uuidString )
         userPicture.image = image
         dismiss(animated: true, completion: nil)
         
